@@ -7,5 +7,5 @@
 
 [使用qemu 运行 UniProton](doc/run_uniproton.md)
 
-[UniProton构建的流程]()
+[UniProton构建的流程](doc/build_uniproton.md)
 
