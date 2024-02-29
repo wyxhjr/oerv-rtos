@@ -20,7 +20,7 @@
  *                         调用功能规范相关内容                           *
  ************************************************************************/
 
-// 扩展ID
+// 扩展ID 注意，此处的扩展ID和用户使用的扩展ID是一样的，但是在模块内部我们不使用用户的扩展ID宏
 #define EID_BASE                    0x10  //基础扩展
 // 扩展内部的功能ID
 
@@ -32,5 +32,6 @@
 
 #define FID_BASE_PROBE_SBI_EXTEN    0x3   //查询某个EID扩展是否可用
 
+#define FID_BASE_GET_MHART_ID       0x4   //获取machine vendor id 机器厂商
 
 #endif

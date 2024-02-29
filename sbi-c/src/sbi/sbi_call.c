@@ -13,8 +13,8 @@
 
 sbi_ret_t sbi_get_spec_version()
 {
-    // 获得SPEC功能的扩展     :  BASE 扩展 -> EID_BASE
-    // 功能号为              :   0号功能号 -> FID_BASE_GET_SBI_VERSION
+    // 所在扩展              :  BASE 扩展 -> EID_BASE
+    // 功能号为              :  0号功能号 -> FID_BASE_GET_SBI_VERSION
     // 根据sbi2.0 手册建议，使用unsigned long long 来存放扩展ID 和功能ID
     sbi_ret_t ret;
     unsigned long long exten_id;
@@ -29,8 +29,8 @@ sbi_ret_t sbi_get_spec_version()
 
 sbi_ret_t sbi_get_impl_id()
 {
-    // 获得SPEC功能的扩展     :  BASE 扩展 -> EID_BASE
-    // 功能号为              :   1号功能号 -> FID_BASE_GET_SBI_IMPL_ID
+    // 所在扩展              :  BASE 扩展 -> EID_BASE
+    // 功能号为              :  1号功能号 -> FID_BASE_GET_SBI_IMPL_ID
     sbi_ret_t ret;
     unsigned long long exten_id;
     unsigned long long func_id;
@@ -44,8 +44,8 @@ sbi_ret_t sbi_get_impl_id()
 
 sbi_ret_t sbi_get_impl_version()
 {
-    // 获得SPEC功能的扩展     :  BASE 扩展 -> EID_BASE
-    // 功能号为              :   1号功能号 -> FID_BASE_GET_SBI_IMPL_VER
+    // 所在扩展              :  BASE 扩展 -> EID_BASE
+    // 功能号为              :  2号功能号 -> FID_BASE_GET_SBI_IMPL_VER
     sbi_ret_t ret;
     unsigned long long exten_id;
     unsigned long long func_id;
@@ -59,13 +59,31 @@ sbi_ret_t sbi_get_impl_version()
 
 sbi_ret_t sbi_probe_extension(long extension_id)
 {
+    // 所在扩展              :   BASE 扩展 -> EID_BASE
+    // 功能号为              :   3号功能号 -> FID_BASE_PROBE_SBI_EXTEN
     sbi_ret_t ret;
     unsigned long long exten_id;
     unsigned long long func_id;
     exten_id = EID_BASE;
-    func_id  = FID_BASE_GET_SBI_IMPL_VER;
+    func_id  = FID_BASE_PROBE_SBI_EXTEN;
     __sbi_param(exten_id,func_id);
     __sbi_call();
     __sbi_param_ret();
     return ret;
 }
+
+sbi_ret_t sbi_get_mvendorid()
+{
+    // 所在扩展              :   BASE 扩展 -> EID_BASE
+    // 功能号为              :   4号功能号 -> FID_BASE_GET_MHART_ID
+    sbi_ret_t ret;
+    unsigned long long exten_id;
+    unsigned long long func_id;
+    exten_id = EID_BASE;
+    func_id  = FID_BASE_GET_MHART_ID;
+    __sbi_param(exten_id,func_id);
+    __sbi_call();
+    __sbi_param_ret();
+    return ret;
+}
+

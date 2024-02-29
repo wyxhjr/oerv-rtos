@@ -1,4 +1,4 @@
-#include "sbi.h"
+#include "sbi_ext_base.h"
 
 #define OS_STACK_SIZE 4096
 #define CPUS          4 
@@ -14,7 +14,9 @@ void main(void)
         ret = sbi_get_impl_id();
         ret = sbi_get_impl_version();
         ret = sbi_probe_extension(EXTENSION_ID_BASE);
+        ret = sbi_probe_extension(0x2534);
     }
+    sbi_ret_t ret = sbi_get_mvendorid();
     while(1) ;
 
 }
