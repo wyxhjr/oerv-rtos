@@ -87,3 +87,53 @@ sbi_ret_t sbi_get_mvendorid()
     return ret;
 }
 
+
+sbi_ret_t sbi_debug_console_write(unsigned long num_bytes,   unsigned long base_addr_lo,   unsigned long base_addr_hi)
+{
+    // 所在扩展              :   BASE 扩展 -> EID_DEBUG
+    // 功能号为              :   0号功能号 -> FID_DEBUG_CONSOLE_WRITE
+    sbi_ret_t ret;
+    unsigned long long exten_id;
+    unsigned long long func_id;
+    exten_id = EID_DEBUG;
+    func_id  = FID_DEBUG_CONSOLE_WRITE;
+    __sbi_param(exten_id,func_id);
+    __sbi_call();
+    __sbi_param_ret();
+    return ret;
+}
+
+
+sbi_ret_t sbi_debug_console_read(unsigned long num_bytes,   unsigned long base_addr_lo,   unsigned long base_addr_hi)
+{
+    // 所在扩展              :   BASE 扩展 -> EID_DEBUG
+    // 功能号为              :   0号功能号 -> FID_DEBUG_CONSOLE_READ
+    sbi_ret_t ret;
+    unsigned long long exten_id;
+    unsigned long long func_id;
+    exten_id = EID_DEBUG;
+    func_id  = FID_DEBUG_CONSOLE_READ;
+    __sbi_param(exten_id,func_id);
+    __sbi_call();
+    __sbi_param_ret();
+    return ret;
+}
+
+
+sbi_ret_t sbi_debug_console_write_byte(uint8_t byte)
+{
+    // 所在扩展              :   BASE 扩展 -> EID_DEBUG
+    // 功能号为              :   0号功能号 -> FID_DEBUG_CONSOLE_WRITE_BYTE
+    sbi_ret_t ret;
+    unsigned long long exten_id;
+    unsigned long long func_id;
+    exten_id = EID_DEBUG;
+    func_id  = FID_DEBUG_CONSOLE_WRITE_BYTE;
+    __sbi_param(exten_id,func_id);
+    __sbi_call();
+    __sbi_param_ret();
+    return ret;
+}
+
+
+
