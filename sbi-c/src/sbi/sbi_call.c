@@ -88,6 +88,8 @@ sbi_ret_t sbi_get_mvendorid()
 }
 
 
+#include "sbi.h"
+
 sbi_ret_t sbi_debug_console_write(unsigned long num_bytes,   unsigned long base_addr_lo,   unsigned long base_addr_hi)
 {
     // 所在扩展              :   BASE 扩展 -> EID_DEBUG
@@ -107,7 +109,7 @@ sbi_ret_t sbi_debug_console_write(unsigned long num_bytes,   unsigned long base_
 sbi_ret_t sbi_debug_console_read(unsigned long num_bytes,   unsigned long base_addr_lo,   unsigned long base_addr_hi)
 {
     // 所在扩展              :   BASE 扩展 -> EID_DEBUG
-    // 功能号为              :   0号功能号 -> FID_DEBUG_CONSOLE_READ
+    // 功能号为              :   1号功能号 -> FID_DEBUG_CONSOLE_READ
     sbi_ret_t ret;
     unsigned long long exten_id;
     unsigned long long func_id;
@@ -123,7 +125,7 @@ sbi_ret_t sbi_debug_console_read(unsigned long num_bytes,   unsigned long base_a
 sbi_ret_t sbi_debug_console_write_byte(uint8_t byte)
 {
     // 所在扩展              :   BASE 扩展 -> EID_DEBUG
-    // 功能号为              :   0号功能号 -> FID_DEBUG_CONSOLE_WRITE_BYTE
+    // 功能号为              :   2号功能号 -> FID_DEBUG_CONSOLE_WRITE_BYTE
     sbi_ret_t ret;
     unsigned long long exten_id;
     unsigned long long func_id;
