@@ -22,6 +22,12 @@
 
 // 扩展ID 注意，此处的扩展ID和用户使用的扩展ID是一样的，但是在模块内部我们不使用用户的扩展ID宏
 #define EID_BASE                    0x10  //基础扩展
+
+#define EID_DEBUG                   0x4442434E   //调试控制台扩展
+
+#define EID_HANG                    0x53555350   //系统挂起扩展
+
+#define EID_CPPC                    0x43505043   //处理器性能控制扩展
 // 扩展内部的功能ID
 
 #define FID_BASE_GET_SBI_VERSION    0x0   //获得SBI版本
@@ -33,5 +39,27 @@
 #define FID_BASE_PROBE_SBI_EXTEN    0x3   //查询某个EID扩展是否可用
 
 #define FID_BASE_GET_MHART_ID       0x4   //获取machine vendor id 机器厂商
+
+
+
+#define FID_DEBUG_CONSOLE_WRITE           0x0   //控制台写入
+
+#define FID_DEBUG_CONSOLE_READ            0x1   //控制台读取
+
+#define FID_DEBUG_CONSOLE_WRITE_BYTE      0x2   //写单个字节到控制台
+
+
+
+#define FID_HANG_SBI_SYSTEM_SUSPEND       0x0   //系统挂起
+
+
+
+#define FID_SBI_CPPC_PROBE                0x0   //探测CPPC寄存器是否被寄存器实现
+
+#define FID_SBI_CPPC_READ                 0x1   //读取CPPC寄存器，若XLEN为32，返回低32
+
+#define FID_SBI_CPPC_READ_HI              0x2   //读取CPPC寄存器高32，若XLEN为64或更高，返回0
+
+#define FID_SBI_CPPC_WRITE                0x3   //写入CPPC寄存器
 
 #endif
