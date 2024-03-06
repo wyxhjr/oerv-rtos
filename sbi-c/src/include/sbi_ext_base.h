@@ -106,6 +106,4 @@ sbi_ret_t sbi_get_mvendorid();
 
 
 
-
-
 #endif
