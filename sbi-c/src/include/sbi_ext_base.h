@@ -104,6 +104,4 @@ sbi_ret_t sbi_probe_extension(long exten_id);
 sbi_ret_t sbi_get_mvendorid();
 
 
-
-
 #endif
