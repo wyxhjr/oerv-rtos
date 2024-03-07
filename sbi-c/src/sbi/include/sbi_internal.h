@@ -42,7 +42,7 @@
 
 #define FID_SBI_HART_GET_STATUS           0x2   //获取hart的状态
 
-#define FID_SBI_HART_SUSPEND              0x3   //挂起hart
+#define FID_SBI_HART_SUSPEND             0x3   //挂起hart
 
 
 
