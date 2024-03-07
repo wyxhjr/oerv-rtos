@@ -11,11 +11,75 @@
 
 
 
+sbi_ret_t sbi_hart_start(unsigned  long  hartid, unsigned long start_addr, unsigned long opaque)
+{
+    // 所在扩展              :  HSM 扩展 -> EID_HSM
+    // 功能号为              :  0号功能号 -> FID_HSM_SBI_HART_START
+    // 根据sbi2.0 手册建议，使用unsigned long long 来存放扩展ID 和功能ID
+    sbi_ret_t ret;
+    unsigned long long exten_id;
+    unsigned long long func_id;
+    exten_id = EID_HSM;
+    func_id  = FID_HSM_SBI_HART_START;
+    __sbi_param(exten_id,func_id);
+    __sbi_call();
+    __sbi_param_ret();
+    return ret;
+}
+
+
+sbi_ret_t sbi_hart_stop(void)
+{
+    // 所在扩展              :  HSM 扩展 -> EID_HSM
+    // 功能号为              :  1号功能号 -> FID_HSM_SBI_HART_STOP
+    sbi_ret_t ret;
+    unsigned long long exten_id;
+    unsigned long long func_id;
+    exten_id = EID_HSM;
+    func_id  = FID_HSM_SBI_HART_STOP;
+    __sbi_param(exten_id,func_id);
+    __sbi_call();
+    __sbi_param_ret();
+    return ret;
+}
+
+
+sbi_ret_t sbi_hart_get_status(unsigned long hartid)
+{
+    // 所在扩展              :  HSM 扩展 -> EID_HSM
+    // 功能号为              :  2号功能号 ->FID_SBI_HART_GET_STATUS 
+    sbi_ret_t ret;
+    unsigned long long exten_id;
+    unsigned long long func_id;
+    exten_id = EID_HSM;
+    func_id  = FID_SBI_HART_GET_STATUS;
+    __sbi_param(exten_id,func_id);
+    __sbi_call();
+    __sbi_param_ret();
+    return ret;
+}
+
+
+sbi_ret_t sbi_hart_suspend(uint32_t suspend_type, unsigned long resume_addr, unsigned long opaque)
+{
+    // 所在扩展              :  HSM 扩展 -> EID_HSM
+    // 功能号为              :  3号功能号 ->FID_SBI_HART_SUSPEND 
+    sbi_ret_t ret;
+    unsigned long long exten_id;
+    unsigned long long func_id;
+    exten_id = EID_HSM;
+    func_id  = FID_SBI_HART_SUSPEND;
+    __sbi_param(exten_id,func_id);
+    __sbi_call();
+    __sbi_param_ret();
+    return ret;
+}
+
+
 sbi_ret_t sbi_get_spec_version()
 {
     // 所在扩展              :  BASE 扩展 -> EID_BASE
     // 功能号为              :  0号功能号 -> FID_BASE_GET_SBI_VERSION
-    // 根据sbi2.0 手册建议，使用unsigned long long 来存放扩展ID 和功能ID
     sbi_ret_t ret;
     unsigned long long exten_id;
     unsigned long long func_id;
