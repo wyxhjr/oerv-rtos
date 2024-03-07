@@ -30,9 +30,9 @@ typedef struct sbi_ret_s {
 // 定义所有扩展对应的值的宏名字 
 #define EXTENSION_ID_BASE           0x10
 #define EXTENSION_ID_DEBUG          0x4442434E
-
-
-
-
+#define EXTENSION_ID_HANG           0x53555350 
+#define EXTENSION_ID_CPPC           0x43505043  
+#define EXTENSION_ID_ACCELERATE     0x4E41434C   
+#define EXTENSION_ID_STEAL_TIME     0x535441     
 
 #endif
