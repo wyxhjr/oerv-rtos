@@ -9,7 +9,11 @@
 
 ## UniProton入门手册
 
-[使用qemu 运行 UniProton](doc/run_uniproton.md)
+[使用qemu 运行 UniProton【重要】](doc/run_uniproton.md)
 
-[UniProton构建的流程](doc/build_uniproton.md)
+[UniProton构建的流程【重要】](doc/build_uniproton.md)
+
+[如何提交自己在运行UniProton on riscv64时发生的bug](doc/rv64_uniproton.md)
+
+[使用UniProton进行应用级别的开发【重要】](doc/uniproton_demo.md)
 
