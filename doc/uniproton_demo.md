@@ -220,7 +220,7 @@
 
   - ![](pic/my_hello_wolrd.png)不必在意你没有的其他工程，按照格式添加对应工程目录即可
 
-  - 进入 build 目录，所在的路径为 `UniProton/demos/riscv64virt/build`
+  - 进入 build 目录，所在的路径为 `UniProton/demos/riscv64virt/build` 修改 `build_app.sh`文件
 
   - ![](pic/hello_word_mine.png)这里按照对应格式添加 my_hello_world 工程 即可
 
