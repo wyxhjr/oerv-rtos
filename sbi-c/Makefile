@@ -1,4 +1,4 @@
-CROSS_COMPILE:=riscv64-linux-
+CROSS_COMPILE:=/opt/buildtools/riscv/bin/riscv64-unknown-elf-
 CC:=$(CROSS_COMPILE)gcc
 LD:=$(CROSS_COMPILE)ld
 NM:=$(CROSS_COMPILE)nm
