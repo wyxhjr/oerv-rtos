@@ -54,13 +54,13 @@
 
   - **注意 ： 此处不应当对这些软件进行任何修改，包括重命名，移动目录所在的位置等操作**
 
-  - 用 `qemu-system-riscv64 --version` 检查当前环境是否存在qemu-system-riscv64 且版本应当为 7.2.0
+  - 用 `qemu-system-riscv64 --version` 检查当前环境是否存在qemu-system-riscv64 且版本应当为 8.2.0
 
   - 若想要退出 docker 环境，执行 `exit` 即可
 
 - 编译UniProton  riscv demo
 
-  - 拉取仓库代码到本地 [此处可以在任意目录下拉取 建议在家目录下拉取]
+  - 拉取仓库代码到本地 [此处可以在任意目录下拉取 **建议在家目录下拉取**]
 
     ```shell
     git clone https://gitee.com/openeuler/UniProton.git
@@ -81,7 +81,7 @@
   - 执行构建
 
     ```shell
-    sh -x -e build_app.sh
+    sh -x -e build_app.sh hello_world
     ```
 
   - 如果在过程中发现没有输出日志这是正常的，比如出现下面的情况
