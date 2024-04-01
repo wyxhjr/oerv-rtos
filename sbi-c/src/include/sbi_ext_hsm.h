@@ -1,5 +1,5 @@
-#ifndef __SBI_EXT_BASE_H
-#define __SBI_EXT_BASE_H
+#ifndef __SBI_EXT_HSM_H
+#define __SBI_EXT_HSM_H
 
 //此文件是用户可以调用的API头文件
 //包含了hart状态管理扩展的SBI调用的C形式的接口

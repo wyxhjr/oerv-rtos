@@ -63,6 +63,6 @@ sbi_ret_t sbi_debug_console_read(unsigned long num_bytes,   unsigned long base_a
  *  SBI_SUCCESS	            字节写入成功                                                                                                *
  *  SBI_ERR_FAILED	        由于 I/O 错误，写字节失败                                                                                    *
  ***************************************************************************************************************************************/
-sbi_ret_t sbi_debug_console_write_byte(uint8_t byte)
+sbi_ret_t sbi_debug_console_write_byte(uint8_t byte);
 
 #endif
