@@ -20,3 +20,5 @@
 [riscv_rtos的各个资料的汇总](./doc_rv_rtos/doc_rv_rtos.md)
 
 [组内RISCV 或者 RTOS 的博客](cases/README.md)
+
+[UniProton riscv gdb调试](https://github.com/wyxhjr/oerv-rtos/blob/main/doc/UniProton%20riscv%20debug.md)
